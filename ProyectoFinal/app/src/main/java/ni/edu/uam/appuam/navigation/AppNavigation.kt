@@ -30,9 +30,11 @@ fun AppNavigation() {
             HomeScreen(navController, username)
         }
 
+
         composable("habits") {
             HabitsScreen(navController)
         }
+
 
         composable("avatar") {
             AvatarScreen(navController)
