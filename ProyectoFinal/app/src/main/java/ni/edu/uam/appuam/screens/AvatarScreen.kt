@@ -41,7 +41,6 @@ fun AvatarScreen(navController: NavController) {
             .statusBarsPadding(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
         Button(onClick = {
             navController.popBackStack()
         }) {

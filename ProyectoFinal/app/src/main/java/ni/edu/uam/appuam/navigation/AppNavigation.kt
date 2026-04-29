@@ -8,6 +8,7 @@ import ni.edu.uam.appuam.screens.AvatarScreen
 import ni.edu.uam.appuam.screens.HabitsScreen
 import ni.edu.uam.appuam.screens.HomeScreen
 import ni.edu.uam.appuam.screens.LoginScreen
+import ni.edu.uam.appuam.screens.TipsScreen
 
 @Composable
 fun AppNavigation() {
@@ -24,20 +25,22 @@ fun AppNavigation() {
             LoginScreen(navController)
         }
 
-        // Home con argumento (username)
+        // Home con argumento username
         composable("home/{username}") { backStackEntry ->
             val username = backStackEntry.arguments?.getString("username") ?: ""
             HomeScreen(navController, username)
         }
 
-
         composable("habits") {
             HabitsScreen(navController)
         }
 
-
         composable("avatar") {
             AvatarScreen(navController)
+        }
+
+        composable("tips") {
+            TipsScreen(navController)
         }
     }
 }
